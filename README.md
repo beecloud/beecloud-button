@@ -58,6 +58,7 @@ debug | bool | 调试信息开关, 开启后将alert一些信息 | 默认为fals
 optional | Object | 支付完成后，webhook将收到的自定义订单相关信息 | 目前只支持javascript基本类型的{key:value}, 不支持嵌套对象 | ｛"msg":"hello world"｝| 否
 instant\_channel | String | 设置该字段后将直接调用渠道支付，不再显示渠道选择菜单 | 必须为"ali", "wxmp"(native扫码), "wx"(jsapi网页内支付), "un"中的一个 | "ali" | 否
 need\_ali\_guide | bool | 微信内是否使用支付宝支付引导页，若不使用设置false | 默认为true | true | 否
+openid | String | 微信内调JSAPI支付必须参数 | 需要开发者微信网页授权获取 | o3kKrjlUsMnv__cK5DYZMl0JoAkY | 否
 
 ### 选填参数event说明
 
