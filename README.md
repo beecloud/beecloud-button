@@ -49,11 +49,11 @@ BC.click(data, event);
 ### 必填参数data字段说明
 参数名 | 类型 | 含义 | 限制| 例子 | 是否必填
 ----  | ---- | ---- | ---- | ---- | ----
-out\_trade\_no | String | 支付订单的编号 | 全局唯一,8到32位的**字母和/或数字**组合 | "bc1234567" | 是
-title | String | 支付订单的标题 | 小于16汉字或者32个字符 | "你的订单" | 是
+out\_trade\_no | String | 支付订单的编号 | 全局唯一,8到32位的**字母和/或数字**组合 | bc1234567 | 是
+title | String | 支付订单的标题 | 小于16汉字或者32个字符,不支持英文的单引号 **'** 与双引号 **"** | 你的订单 | 是
 amount | Int | 支付订单的总价(单位:分) | 大于0 | 1 | 是
 sign | String | 订单信息安全签名 |  依次将以下字段（注意是UTF8编码）连接BeeCloud appId、 title、 amount、 out\_trade\_no、 BeeCloud appSecret, 然后计算连接后的字符串的32位MD5 | b6273d932b0aa801d9bd97220f1fb039 | 是
-return\_url | String | 支付成功后跳转地址，除微信内jsapi支付不支持 | 必须以http://或https://开头 | http://www.beecloud.cn | 否
+return\_url | String | 支付成功后跳转地址，除微信内jsapi支付不支持 | 必须以http://或https://开头, **不允许带任何参数** | http://www.beecloud.cn | 否
 debug | bool | 调试信息开关, 开启后将alert一些信息 | 默认为false | false | 否
 optional | Object | 支付完成后，webhook将收到的自定义订单相关信息 | 目前只支持javascript基本类型的{key:value}, 不支持嵌套对象 | ｛"msg":"hello world"｝| 否
 instant\_channel | String | 设置该字段后将直接调用渠道支付，不再显示渠道选择菜单 | 必须为"ali", "wxmp"(native扫码), "wx"(jsapi网页内支付), "un"中的一个 | "ali" | 否
