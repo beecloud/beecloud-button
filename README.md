@@ -37,7 +37,7 @@
 
 4. 激活秒支付button功能，进入APP->设置->秒支付button项，拖拽支付渠道开启该支付渠道，同时还可以调整你需要的渠道菜单的显示顺序，点击”保存“后会生成appid对应的**script标签**。**需要将此script标签放到任何需要使用秒支付Button的网页里**。
 
-![支付设置前](http://beeclouddoc.qiniudn.com/1111.png)
+![支付设置前](http://beeclouddoc.qiniudn.com/sbutton.jpg)
 
 ## BC.click接口说明
 ### BC.click原型
