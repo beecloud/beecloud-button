@@ -56,7 +56,7 @@ sign | String | 订单信息安全签名 |  依次将以下字段（注意是UTF
 return\_url | String | 支付成功后跳转地址，除微信内jsapi支付不支持 | 必须以http://或https://开头, **不允许带任何参数** | http://www.beecloud.cn | 否
 debug | bool | 调试信息开关, 开启后将alert一些信息 | 默认为false | false | 否
 optional | Object | 支付完成后，webhook将收到的自定义订单相关信息 | 目前只支持javascript基本类型的{key:value}, 不支持嵌套对象 | ｛"msg":"hello world"｝| 否
-instant\_channel | String | 设置该字段后将直接调用渠道支付，不再显示渠道选择菜单 | "ali"(ALI_WEB、ALI_WAP), <br>"wxmp"(WX_NATIVE扫码),<br>"bcwxmp"(BC_NATIVE扫码),<br>"wx"(WX_JSAPI微信网页内支付),<br>bcwx(BC_WX_JSAPI),<br> un(UN_WEB),<br>unwap(UN_WAP),<br>bckj(BC_EXPRESS),<br>bcwxwap(BC_WX_WAP微信移动支付) | "ali" | 否
+instant\_channel | String | 设置该字段后将直接调用渠道支付，不再显示渠道选择菜单 | "ali"(ALI_WEB、ALI_WAP), <br>"wxmp"(WX_NATIVE扫码),<br>"bcwxmp"(BC_NATIVE扫码),<br>"wx"(WX_JSAPI微信网页内支付),<br>"bcwx"(BC_WX_JSAPI),<br>"un"(UN_WEB),<br>"unwap"(UN_WAP),<br>"bckj"(BC_EXPRESS),<br>"bcwxwap"(BC_WX_WAP微信移动支付) | "ali" | 否
 need\_ali\_guide | bool | 微信内是否使用支付宝支付引导页，若不使用设置false | 默认为true | true | 否
 openid | String | 微信内调JSAPI支付必须参数 | 需要开发者微信网页授权获取 | o3kKrjlUsMnv__cK5DYZMl0JoAkY | 否
 use_app | bool | 移动端网页直接调用支付宝APP支付，默认true，传false不启用 | 仅限支付宝移动网页端起作用 | 否
