@@ -50,7 +50,7 @@ BC.click(data, event);
 参数名 | 类型 | 含义 | 限制| 例子 | 是否必填
 ----  | ---- | ---- | ---- | ---- | ----
 out\_trade\_no | String | 支付订单的编号 | 全局唯一,8到32位的**字母和/或数字**组合 | bc1234567 | 是
-title | String | 支付订单的标题 | 小于16汉字或者32个字符,不支持英文的单引号 **'** 与双引号 **"** | 你的订单 | 是
+title | String | 支付订单的标题 | 不超过16个汉字或者32个字符;<br>不支持英文的单引号 **'** 与双引号 **"** | 你的订单 | 是
 amount | Int | 支付订单的总价(单位:分) | 大于0 | 1 | 是
 sign | String | 订单信息安全签名 |  依次将以下字段（注意是UTF8编码）连接BeeCloud appId、 title、 amount、 out\_trade\_no、 BeeCloud appSecret, 然后计算连接后的字符串的32位MD5 | b6273d932b0aa801d9bd97220f1fb039 | 是
 return\_url | String | 支付成功后跳转地址，除微信内jsapi支付不支持 | 必须以http://或https://开头, **不允许带任何参数** | http://www.beecloud.cn | 否
